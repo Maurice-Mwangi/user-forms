@@ -32,7 +32,7 @@ main {
 
 .input-section {
     width: 90%;
-    margin: 5px auto;
+    margin: 20px auto;
     position: relative;
     display: grid;
     grid-template-columns: 100%;
@@ -41,18 +41,32 @@ main {
 
 .input-section .label {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    pointer-events: none;
     color: blue;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .input-section input {
     height: 28px;
-    outline: none;
+    border: none;
     padding: 2px;
     width: 100%;
+}
+
+.input-section input:focus {
+    background-color: rgb(201, 219, 235);
+}
+
+.input-section input:focus ~ .label,
+.input-section input:not(:placeholder-shown) ~ .label {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: 12px;
 }
 
 
@@ -79,6 +93,12 @@ main {
     right: 0;
 }
 
+.input-section .input:focus-within ~ .label,
+.input-section .input input:not(:placeholder-shown) ~ .label {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: 12px;
+}
 /* end of password - sign up section */
 
 
