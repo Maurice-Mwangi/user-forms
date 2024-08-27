@@ -35,6 +35,12 @@ main {
     justify-items: center;
 }
 
+.error-section {
+    color: red;
+    width: 90%;
+    margin: 10px auto;
+}
+
 .input-section {
     width: 90%;
     margin: 20px auto;
@@ -177,8 +183,6 @@ footer {
     color: white;
     font-weight: 700;
     font-size: 30px;
-    position: sticky;
-    bottom: 0;
     padding: 50px;
     height: 1fr;
 }
