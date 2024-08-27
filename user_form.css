@@ -190,3 +190,17 @@ footer {
 .hide {
     display: none;
 }
+
+@media only screen and (max-width: 800px){
+    main {
+        width: 70%;
+        display: grid;
+        grid-template-columns: 90%;
+    }
+
+    .frm-log-in {
+        border-left: none;
+        padding-left: 0px;
+        margin-top: 50px;
+    }
+}

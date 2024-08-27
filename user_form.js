@@ -124,3 +124,51 @@ function validating_password(password){
 
     return false;
 }
+
+const pass_view = document.querySelector("#view-password");
+
+pass_view.addEventListener("click", ()=>{
+    password.type = "text";
+    pass_view.src = "media/open eyes.jpg"
+    setTimeout(() => {
+        password.type = "password";
+        pass_view.src = "media/closed eyes.jpg"
+    }, 5000);
+});
+
+
+
+/* 
+
+
+LOGIN CODE HERE 
+
+*/
+
+const usename = document.querySelector("#txtUsename");
+const pass = document.querySelector("#txtPass");
+
+const log_password_viewer = document.querySelector("#log-pass-view");
+const errorLogDisplay = document.querySelector("#error-log-in");
+const loginButton = document.querySelector("#btnLogin");
+
+loginButton.addEventListener('click', (e)=>{
+    if(usename.value.length === 0){
+        errorLogDisplay.innerText = "Username cannot be blank\n";
+        e.preventDefault();
+    }
+    if(pass.value.length === 0){
+        errorLogDisplay.innerText = "Password cannot be blank";
+        e.preventDefault();
+    }
+});
+
+log_password_viewer.addEventListener("click", ()=>{
+    pass.type = "text";
+    log_password_viewer.src = "media/open eyes.jpg"
+    setTimeout(() => {
+        pass.type = "password";
+        log_password_viewer.src = "media/closed eyes.jpg"
+    }, 5000);
+})
+
